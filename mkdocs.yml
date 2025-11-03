@@ -1,0 +1,14 @@
+site_name: 我的知识库
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.instant
+    - search.highlight
+    - content.code.copy
+markdown_extensions:
+  - toc:
+      permalink: true
+  - tables
+  - admonition
+  
