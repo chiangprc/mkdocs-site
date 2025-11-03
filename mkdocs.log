@@ -1,0 +1,18 @@
+INFO    -  Building documentation...
+INFO    -  Cleaning site directory
+INFO    -  Documentation built in 1.16 seconds
+INFO    -  [00:25:44] Watching paths for changes: 'docs', 'mkdocs.yml'
+INFO    -  [00:25:44] Serving on http://127.0.0.1:8000/
+INFO    -  [00:25:44] Browser connected: http://127.0.0.1:8000/
+INFO    -  [02:08:30] Browser connected: http://127.0.0.1:8000/
+INFO    -  [02:35:33] Browser connected: http://127.0.0.1:8000/
+INFO    -  [21:48:50] Browser connected: http://127.0.0.1:8000/
+INFO    -  [23:46:37] Browser connected: http://127.0.0.1:8000/
+INFO    -  [23:46:53] Browser connected: http://127.0.0.1:8000/
+INFO    -  [09:55:29] Browser connected: http://127.0.0.1:8000/
+INFO    -  [09:55:31] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:44:21] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:07:54] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:07:56] Browser connected: http://127.0.0.1:8000/
+INFO    -  [21:43:30] Browser connected: http://127.0.0.1:8000/
+INFO    -  [21:43:33] Browser connected: http://127.0.0.1:8000/
