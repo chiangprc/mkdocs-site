@@ -1,4 +1,8 @@
 site_name: 我的知识库
+site_url: https://chiangprc.github.io/mkdocs-site/
+repo_url: https://github.com/chiangprc/mkdocs-site
+repo_name: chiangprc/mkdocs-site
+
 theme:
   name: material
   language: zh
@@ -6,9 +10,14 @@ theme:
     - navigation.instant
     - search.highlight
     - content.code.copy
+
 markdown_extensions:
   - toc:
       permalink: true
   - tables
   - admonition
+
+nav:
+  - 首页: index.md
+  
   

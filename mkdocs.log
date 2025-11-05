@@ -16,3 +16,43 @@ INFO    -  [12:07:54] Browser connected: http://127.0.0.1:8000/
 INFO    -  [12:07:56] Browser connected: http://127.0.0.1:8000/
 INFO    -  [21:43:30] Browser connected: http://127.0.0.1:8000/
 INFO    -  [21:43:33] Browser connected: http://127.0.0.1:8000/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/wsgiref/handlers.py", line 184, in finish_response
+    self.write(data)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/wsgiref/handlers.py", line 288, in write
+    self.send_headers()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/wsgiref/handlers.py", line 346, in send_headers
+    self.send_preamble()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/wsgiref/handlers.py", line 268, in send_preamble
+    self._write(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/wsgiref/handlers.py", line 467, in _write
+    result = self.stdout.write(data)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socketserver.py", line 799, in write
+    self._sock.sendall(b)
+OSError: [Errno 41] Protocol wrong type for socket
+INFO    -  [02:25:09] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 1.41 seconds
+INFO    -  [02:25:10] Reloading browsers
+INFO    -  [02:32:01] Browser connected: http://127.0.0.1:8000/
+INFO    -  [02:32:02] Browser connected: http://127.0.0.1:8000/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/wsgiref/handlers.py", line 184, in finish_response
+    self.write(data)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/wsgiref/handlers.py", line 288, in write
+    self.send_headers()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/wsgiref/handlers.py", line 346, in send_headers
+    self.send_preamble()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/wsgiref/handlers.py", line 268, in send_preamble
+    self._write(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/wsgiref/handlers.py", line 467, in _write
+    result = self.stdout.write(data)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socketserver.py", line 799, in write
+    self._sock.sendall(b)
+OSError: [Errno 41] Protocol wrong type for socket
+INFO    -  [15:14:11] Browser connected: http://127.0.0.1:8000/
+INFO    -  [20:59:37] Browser connected: http://127.0.0.1:8000/
