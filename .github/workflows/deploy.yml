@@ -38,9 +38,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 5️⃣ 构建 MkDocs
+      # 5️⃣ 构建 MkDocs，出错时打印详细日志
       - name: Build site
-        run: mkdocs build --strict
+        run: |
+          echo "🔹 构建开始..."
+          mkdocs build --strict
+        continue-on-error: false
 
       # 6️⃣ 部署到 GitHub Pages
       - name: Deploy to GitHub Pages
@@ -48,6 +51,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
-          # 可选：自定义部署分支（默认 gh-pages）
-          # publish_branch: gh-pages
           clean: true   # 清理旧文件，防止残留内容
