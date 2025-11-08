@@ -13,22 +13,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ 检出仓库
       - name: Checkout source
         uses: actions/checkout@v4
 
+      # 2️⃣ 设置 Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
+      # 3️⃣ 缓存 pip 包，加快构建
+      - name: Cache pip
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      # 4️⃣ 安装依赖
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # 5️⃣ 构建 MkDocs
       - name: Build site
         run: mkdocs build --strict
 
+      # 6️⃣ 部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.9.3
         with:
@@ -36,3 +50,4 @@ jobs:
           publish_dir: ./site
           # 可选：自定义部署分支（默认 gh-pages）
           # publish_branch: gh-pages
+          clean: true   # 清理旧文件，防止残留内容
