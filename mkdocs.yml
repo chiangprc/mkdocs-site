@@ -1,23 +1,195 @@
-site_name: 我的知识库
-site_url: https://chiangprc.github.io/mkdocs-site/
-repo_url: https://github.com/chiangprc/mkdocs-site
-repo_name: chiangprc/mkdocs-site
+site_name: Leo’s Knowledge Base
+site_url: https://bigprc.com
+site_description: 一个汇聚技术、创意与生活灵感的现代知识导航站
+site_author: Leo Chiang
 
+# ======================
+# 💡 基础设置
+# ======================
 theme:
   name: material
   language: zh
+  favicon: assets/images/favicon.png
+  logo: assets/images/logo.png
   features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.expand
     - navigation.instant
+    - search.suggest
     - search.highlight
+    - toc.integrate
     - content.code.copy
+    - content.tabs.link
+    - header.autohide
+    - footer.social
+    - content.action.edit
+    - content.action.view
+  palette:
+    - scheme: default
+      primary: teal
+      accent: amber
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: 夜间模式
+      primary: indigo
+      accent: light blue
+  font:
+    text: "Inter"
+    code: "Fira Code"
 
+# ======================
+# 📚 导航结构
+# ======================
+nav:
+  - 🏠 首页: index.md
+  - 💻 技术与开发:
+      - 编程语言:
+          - Python: tech/python.md
+          - JavaScript / TypeScript: tech/javascript.md
+          - Go: tech/go.md
+          - Rust: tech/rust.md
+      - 前端开发:
+          - 框架 (React, Vue, Svelte): tech/frontend/frameworks.md
+          - CSS & UI 库: tech/frontend/css-ui.md
+          - 构建工具 (Vite, Webpack): tech/frontend/build-tools.md
+      - 后端开发:
+          - 框架 (Node.js, Django, Spring): tech/backend/frameworks.md
+          - 数据库 (SQL, NoSQL): tech/backend/databases.md
+          - API & 微服务: tech/backend/api.md
+      - 数据科学与AI:
+          - 机器学习 / 深度学习: tech/ai/ml.md
+          - 数据分析与可视化: tech/ai/data.md
+          - AI 工具与平台: tech/ai/tools.md
+      - 网络与安全:
+          - 网络代理与工具 (Loon, QX, Surge): tech/network/proxy.md
+          - 信息安全与渗透: tech/network/security.md
+
+  - 🔧 软件与工具:
+      - 按平台:
+          - macOS: tools/macos.md
+          - Windows: tools/windows.md
+          - Linux: tools/linux.md
+          - iOS: tools/ios.md
+          - Android: tools/android.md
+      - 按功能:
+          - 效率办公: tools/productivity.md
+          - 网络工具: tools/network.md
+          - 系统增强: tools/system.md
+          - 安全隐私: tools/privacy.md
+          - SaaS 在线服务: tools/saas.md
+
+  - 📈 商业与财经:
+      - 加密货币:
+          - 交易所 (CEX / DEX): finance/crypto/exchange.md
+          - 行情与图表: finance/crypto/charts.md
+          - 技术分析 (TA): finance/crypto/ta.md
+          - 链上数据分析: finance/crypto/onchain.md
+      - 传统金融:
+          - 宏观经济: finance/economy.md
+          - 股票 / 基金 / 房地产: finance/markets.md
+      - 职场技能:
+          - 简历与面试: finance/career.md
+          - 办公自动化: finance/automation.md
+      - 电商与营销:
+          - 数字营销: finance/marketing.md
+
+  - 🎨 创意与媒体:
+      - 影视: media/film.md
+      - 音乐: media/music.md
+      - 设计: media/design.md
+      - 摄影: media/photo.md
+      - 视频剪辑: media/video.md
+      - 短视频与直播: media/shorts.md
+
+  - 🎓 知识与教育:
+      - 在线课程: education/moocs.md
+      - 书籍与阅读: education/books.md
+      - 有声读物与播客: education/audio.md
+      - 语言学习: education/language.md
+      - K-12 教育: education/k12.md
+      - 学术研究: education/research.md
+
+  - 🧭 生活与趣味:
+      - 趣味发现: life/fun.md
+      - 历史与人文: life/history.md
+      - 生活方式: life/lifestyle.md
+      - 社区与论坛: life/community.md
+
+  - 📚 资源与素材库:
+      - 图片素材: assets/images.md
+      - 视频素材: assets/videos.md
+      - 音频素材: assets/audios.md
+      - 字体库: assets/fonts.md
+      - 模板库: assets/templates.md
+
+  - 📬 关于与联系:
+      - 关于本站: about.md
+      - 联系方式: contact.md
+      - 隐私与版权声明: legal/privacy.md
+
+# ======================
+# 🔍 插件
+# ======================
+plugins:
+  - search
+  # ⚠️ sitemap 暂时注释，避免未安装错误
+  # - sitemap:
+  #     changefreq: weekly
+  #     priority: 0.5
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+  - autorefs
+  - minify:
+      minify_html: true
+  - awesome-pages
+
+# ======================
+# 📱 社交信息
+# ======================
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/chiangprc
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/chiangprc
+    - icon: fontawesome/solid/envelope
+      link: mailto:hi@bigprc.com
+    # ⚠️ 删除或注释 RSS 图标避免报错
+    # - icon: fontawesome/brands/rss
+    #   link: /feed.xml
+  generator: false
+  analytics:
+    provider: google
+    property: G-XXXXXXX
+
+# ======================
+# ⚙️ Markdown 扩展
+# ======================
 markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
   - toc:
       permalink: true
-  - tables
-  - admonition
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.emoji
+  - pymdownx.tasklist
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.caret
+  - pymdownx.tilde
 
-nav:
-  - 首页: index.md
-  
-  
+# ======================
+# 🗂️ 版权与页脚
+# ======================
+copyright: >
+  © 2025 Leo Chiang · 内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 协议
