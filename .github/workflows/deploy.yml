@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: write    # ✅ 允许写入 Pages 分支
+  contents: write    # 允许写入 Pages 分支
 
 jobs:
   deploy:
@@ -23,7 +23,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install mkdocs mkdocs-material
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: Build site
         run: mkdocs build --strict
